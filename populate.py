@@ -52,6 +52,9 @@ def download_file(url):
     
     return filename
 
+def download_file_local(url):
+    return url
+
 def combine_extracts(bbox, files):
     """ Shell out to osmosis to combine extracts and pull out a bounding box.
     """
