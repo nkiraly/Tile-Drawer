@@ -34,9 +34,6 @@ apt-get -y install zip unzip gunicorn memcached gdal-bin python-mapnik \
                    libgeos-c1 libgeos-dev python-dev python-psycopg2 \
                    build-essential
 
-ln -s /usr/lib/postgresql/9.1/bin/shp2pgsql /usr/bin/shp2pgsql # really?
-ln -s /usr/lib/postgresql/9.1/bin/pgsql2shp /usr/bin/pgsql2shp # seriously?
-
 pip install TileStache ModestMaps Cascadenik shapely imposm.parser imposm
 
 # recent osmosis will have to be done manually,
