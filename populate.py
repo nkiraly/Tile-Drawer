@@ -117,7 +117,7 @@ def import_extract_osm2pgsql(filename):
     
     # Apply new High Road views
     
-    highroad_sql = urlopen('https://raw.github.com/migurski/HighRoad/master/views.pgsql').read()
+    highroad_sql = urlopen('https://raw.github.com/migurski/HighRoad/master/high_road_views-setup.pgsql').read()
     
     psql = Popen('psql -U osm planet_osm'.split(), stdin=PIPE, stderr=PIPE, stdout=PIPE)
     psql.stdin.write(highroad_sql)
