@@ -12,9 +12,17 @@ fi
 
 ln -s /var/log/tiledrawer.log /usr/local/tiledrawer/progress/tiledrawer.log
 
+
 #
 # Package installation.
 #
+
+## the tiledrawer builder targeting ubuntu 11 was using mapnik 1.x
+## fix python and stylesheet dependencies with python easy_install
+apt-get install -y python-software-properties
+add-apt-repository -y ppa:mapnik/v2.2.0
+apt-get install -y python-setuptools
+easy_install cssutils
 
 apt-get -y install nginx
 
