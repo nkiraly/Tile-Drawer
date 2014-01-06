@@ -36,10 +36,10 @@ apt-get -y install zip unzip gunicorn memcached gdal-bin python-mapnik \
 
 pip install TileStache ModestMaps Cascadenik shapely imposm.parser imposm
 
-# recent osmosis will have to be done manually,
-# use a mirror of http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-0.40.1.tgz
-curl -s http://stuff.tiledrawer.com/osmosis-0.40.1.tgz | tar -C /usr/local -xzf -
-ln -s /usr/local/osmosis-0.40.1/bin/osmosis /usr/bin/osmosis
+# use the most recent osmosis release from http://bretth.dev.openstreetmap.org/osmosis-build/
+mkdir /usr/local/osmosis-0.43.1
+curl -s http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-0.43.1.tgz | tar -C /usr/local/osmosis-0.43.1 -xzf -
+ln -s /usr/local/osmosis-0.43.1/bin/osmosis /usr/bin/osmosis
 
 mv /etc/memcached.conf /etc/memcached-orig.conf
 ln -s /usr/local/tiledrawer/memcached/memcached.conf /etc/memcached.conf
