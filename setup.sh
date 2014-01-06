@@ -22,7 +22,6 @@ ln -s /var/log/tiledrawer.log /usr/local/tiledrawer/progress/tiledrawer.log
 apt-get install -y python-software-properties
 add-apt-repository -y ppa:mapnik/v2.2.0
 apt-get install -y python-setuptools
-easy_install cssutils
 
 apt-get -y install nginx
 
@@ -39,7 +38,7 @@ apt-get -y install zip unzip gunicorn memcached gdal-bin python-mapnik \
                    python-pip python-imaging python-gevent python-memcache \
                    osm2pgsql postgresql-9.1-postgis openjdk-6-jre-headless \
                    protobuf-compiler libprotobuf-dev libtokyocabinet-dev \
-                   libgeos-c1 libgeos-dev python-dev python-psycopg2 \
+                   libgeos-c1 libgeos-dev python-dev python-psycopg2 python-cssutils \
                    build-essential
 
 pip install TileStache ModestMaps Cascadenik shapely imposm.parser imposm
