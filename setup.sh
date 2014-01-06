@@ -80,6 +80,9 @@ sudo -u postgres createdb -T template0 -E UTF8 -O osm planet_osm
 
 psql -U postgres planet_osm < /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql
 psql -U postgres planet_osm < /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql
+# use imposm definition of srid 900913
+psql -U postgres planet_osm -c "DELETE FROM spatial_ref_sys WHERE srid = 900913"
+psql -U postgres planet_osm < /usr/local/lib/python2.7/dist-packages/imposm/900913.sql
 
 echo 'ALTER TABLE geometry_columns OWNER TO osm;' | psql -U postgres planet_osm
 echo 'ALTER TABLE spatial_ref_sys OWNER TO osm;' | psql -U postgres planet_osm
