@@ -3,7 +3,7 @@ Tile-Drawer
 
 Rapid deployment of an OpenStreetMap-based map tiles server.
 
-What follows is a fast track to kickstarting an nginx + unicorn + memcached + mapnik + postgresql + postgis OpenStreetMaps tile server.
+What follows is the fast track to using Tile-Drawer to kickstart an nginx + unicorn + memcached + Cascadenik + imposm + TileStache + ModestMaps + mapnik + postgresql + postgis OpenStreetMaps tile serving solution.
 
 I assume things such as: You know how to install Ubuntu Server 13.10, you know how to allocate disk and RAM, and you want to be friends with an OSM tile server.
 
